@@ -18,3 +18,10 @@ volume = (operation1 * operation2)/10000000000
 #print the volume of the wheel for the user to see
 print (f'The approximate volume is {volume:.2f} liters')
 
+from datetime import datetime
+
+current_date = datetime.now()
+
+with open ('volumes.txt', 'a', encoding='utf-8') as volumes:
+        volumes.write(f'{current_date.strftime("%x")}, {width:.0f}, {ratio:.0f}, {diameter:.0f}, {volume:.2f} \n')
+    
